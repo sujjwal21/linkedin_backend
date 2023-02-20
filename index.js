@@ -8,6 +8,9 @@ require("dotenv").config();
 
 const app=express()
 app.use(cors())
+app.get("/",(req,res)=>{
+    res.send("Welcome to home Page")
+})
 app.use("/users",userRouter)
 app.use(Authentication)
 app.use("/posts",postRouter)
